@@ -30,6 +30,9 @@ ROOT_URLCONF = 'config.urls'
 # WSGI
 WSGI_APPLICATION = 'config.wsgi.application'
 
+# Users and Authentication
+AUTH_USER_MODEL = 'users.User'
+
 # Apps
 DJANGO_APPS = [
     'django.contrib.auth',
@@ -41,8 +44,14 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    'rest_framework',
+    'rest_framework.authtoken',
+    'django_filters'
 ]
 LOCAL_APPS = [
+    'cride.users.apps.UsersAppConfig',
+    'cride.circles.apps.CirclesAppConfig',
+    'cride.rides.apps.RidesAppConfig',
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
