@@ -5,12 +5,12 @@ from django.db import models
 
 
 class CRideModel(models.Model):
-    """Comparte Ride based model
+    """Comparte Ride base model.
 
-    CrideModel acts as an abstract base class from which every
+    CRideModel acts as an abstract base class from which every
     other model in the project will inherit. This class provides
     every table with the following attributes:
-        + created (DateTime): Store the datetime he object was created.
+        + created (DateTime): Store the datetime the object was created.
         + modified (DateTime): Store the last datetime the object was modified.
     """
 
@@ -26,7 +26,7 @@ class CRideModel(models.Model):
     )
 
     class Meta:
-        """Meta options"""
+        """Meta option."""
 
         abstract = True
 
